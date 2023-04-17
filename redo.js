@@ -1,8 +1,8 @@
 // 1. Write a function that takes in a string and returns it when reversed
 // let food = “eating”
 function reverseString(food){
-    let d=(food.split("")) 
-    console.log((d).reverse())
+    let d=(food.split("").reverse().join("")) 
+    console.log(d)
 }
 let food="eating"
 
@@ -44,36 +44,27 @@ function binarySearch(num,target){
     let right=num.length-1;
     while(left<=right){
         middle=Math.floor((left+right)/2);
-        if(num[middle===target]){
+        if(num[middle]===target){
             return middle;
         }
-        else if(num[middle>target]){
-            right=middle-1
+        else if(num[middle]>target){
+            right=middle-1;
         }else{
-            left=middle+1
+            left=middle+1;
         }
     }
     return null;
 }
-let num = [2,8,0,23,5,45,76];
 let target=23;
-
-const sortedNum=divideArr(num,target)
-const bin=binarySearch(divideArr,num)
-console.log(binarySearch(num,target))
+let num = divideArr([2,8,0,23,5,45,76]);
 console.log(divideArr(num))
+console.log(binarySearch(num,target))
+
 
 // Given years between 2000 and 2023, console all the leap years in the following
 // sentence, i.e “2020 is a leap year” if not console log i.e “2001 is not a leap year”
-// let years=[2000,2001,2002,2003];
-// for(let year in years)
-// if(year%2==0){
-//     console.log("is a leap year")
 
-// }
-// else{
-//     console.log("is not a leap year")
-// }
+
 for(let year=2000;year<=2023;year++){
 if(year%4==0){
     console.log(year+ "is a leap year")
