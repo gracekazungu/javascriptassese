@@ -92,14 +92,19 @@ for(let number=0;number<=100;number++){
 // elements multiplied by 4.
 // let numArray = [12,87,45,75,23,64,73]
 function ArrayNum(numArray){
- let r=[];
+    let r=[];
  numArray.forEach(function(numm){
 r.push(numm*4)
   })
   console.log(r)
+// for(let numm=0;numm<=numArray.length;numm++){
+//     r.push(numArray[numm]*4);
+//    }
+//    console.log(r)
 }
 let numArray = [12,87,45,75,23,64,73]
 ArrayNum(numArray)
+
 
 
 // Write a function that takes in an array of strings and returns an array with every element

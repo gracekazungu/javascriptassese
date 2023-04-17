@@ -44,10 +44,10 @@ function binarySearch(num,target){
     let right=num.length-1;
     while(left<=right){
         middle=Math.floor((left+right)/2);
-        if(num[middle===target]){
+        if(num[middle]===target){
             return middle;
         }
-        else if(num[middle>target]){
+        else if(num[middle]>target){
             right=middle-1
         }else{
             left=middle+1
